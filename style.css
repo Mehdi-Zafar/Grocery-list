@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500");
+
+* {
+  font-family: "Cinzel", serif;
+}
+
+body {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div.container {
+  background-color: mistyrose;
+  color: black;
+  margin-inline: auto;
+  margin-top: 25px;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-inline: 30px;
+  height: fit-content;
+}
+
+div.container h1 {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  padding-inline: 20px;
+  font-size: large;
+}
+
+button {
+  background-color: mistyrose;
+  margin: 5px;
+  font-size: xx-large;
+  transition: all 0.5s;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.addNew:hover,
+button.remove:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+  transform: rotate(180deg);
+}
+
+button.addNew {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+button.reset {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  border-radius: 10px;
+  font-size: x-large;
+  padding: 5px;
+}
+
+button.reset:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 550px) {
+  div.container {
+    padding-inline: 20px;
+    font-size: medium;
+  }
+  button.reset {
+    display: block;
+    position: relative;
+    margin-inline: auto;
+    top: 0;
+    right: 0;
+  }
+}
