@@ -13,30 +13,106 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Grocery List</h1>
-      <table>
-        <!-- <tr>
-          <th>Name</th>
-          <td>Ali</td>
-          <td><button class="remove">Remove</button></td>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <td>Sadiq</td>
-          <td><button class="remove">Remove</button></td>
-        </tr>
-        <tr>
-          <th>Name</th>
-          <td>Jaffer</td>
-          <td><button class="remove">Remove</button></td>
-        </tr> -->
-      </table>
-      <button class="addNew" title="Add items">
-        <i class="bi bi-plus-square"></i>
-      </button>
-      <h2></h2>
+    <div><h1 class="page-heading">Welcome to Grocery Store!</h1></div>
+    <div class="big-container">
+      <div class="container list">
+        <h1>Grocery Item List</h1>
+        <table>
+          <tr>
+            <th>Item Name</th>
+            <th>Portion</th>
+            <th>Price (Rs)</th>
+            <th>Add to Cart</th>
+          </tr>
+          <tr>
+            <th>Rice</th>
+            <td>1 Kg</td>
+            <td>150</td>
+            <td>
+              <button
+                value="Rice (1 Kg)"
+                data-price="150"
+                class="addNew"
+                title="Add to cart"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th>Sugar</th>
+            <td>1 Kg</td>
+            <td>100</td>
+            <td>
+              <button
+                value="Sugar (1 Kg)"
+                data-price="100"
+                class="addNew"
+                title="Add to cart"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th>Milk</th>
+            <td>1 Lt</td>
+            <td>150</td>
+            <td>
+              <button
+                value="Milk (1 Lt)"
+                data-price="150"
+                class="addNew"
+                title="Add to cart"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th>Chicken</th>
+            <td>1 Kg</td>
+            <td>250</td>
+            <td>
+              <button
+                value="Chicken (1 Kg)"
+                data-price="250"
+                class="addNew"
+                title="Add to cart"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th>Butter</th>
+            <td>1 packet</td>
+            <td>50</td>
+            <td>
+              <button
+                value="Butter (1 packet)"
+                data-price="50"
+                ;
+                class="addNew"
+                title="Add to cart"
+              >
+                <i class="bi bi-plus-square"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+        <h2></h2>
+      </div>
+      <div class="container cart">
+        <h1>Your cart</h1>
+        <h3 class="empty-word">Empty!</h3>
+        <table></table>
+        <h3>Total Bill(Rs) : <span class="bill"></span></h3>
+        <div class="btn-cart">
+          <button class="reset" title="Empty list">Reset</button>
+          <button class="buy" title="Buy items">Buy</button>
+        </div>
+      </div>
     </div>
-    <button class="reset" title="Empty list">Reset</button>
   </body>
 </html>

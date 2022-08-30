@@ -10,16 +10,28 @@ body {
   background-repeat: no-repeat;
 }
 
+div h1.page-heading {
+  color: gold;
+  text-align: center;
+  text-shadow: 1px 1px 5px rgb(241, 241, 28);
+}
+
+div.big-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 div.container {
   background-color: mistyrose;
   color: black;
   margin-inline: auto;
   margin-top: 25px;
-  width: fit-content;
+  width: 25%;
   border: 1px solid black;
   border-radius: 10px;
   padding-inline: 30px;
   height: fit-content;
+  text-align: center;
 }
 
 div.container h1 {
@@ -27,53 +39,63 @@ div.container h1 {
   text-decoration: underline;
 }
 
+div.container h3.empty-word {
+  text-align: center;
+}
+
 table,
 th,
 td {
   border: 2px solid black;
   border-collapse: collapse;
-  padding: 5px;
-  padding-inline: 20px;
+  padding: 2px;
+  /* padding-inline: 10px; */
   font-size: large;
+  margin-inline: auto;
 }
 
 button {
   background-color: mistyrose;
-  margin: 5px;
-  font-size: xx-large;
+  margin: 0 5px 5px;
+  font-size: large;
   transition: all 0.5s;
-  border: none;
+  border: 1px solid black;
+  display: block;
 }
 
 button:hover {
   cursor: pointer;
 }
 
-button.addNew:hover,
-button.remove:hover {
-  cursor: pointer;
+button.addNew:hover {
   transition: all 0.5s;
   transform: rotate(180deg);
 }
 
 button.addNew {
   margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  margin-inline: auto;
+  display: inline-block;
+  border: none;
+  font-size: xx-large;
 }
 
-button.reset {
-  position: absolute;
-  right: 5%;
-  top: 5%;
-  border-radius: 10px;
-  font-size: x-large;
-  padding: 5px;
+button.reset,
+button.buy {
+  border-radius: 5px;
+  padding: 3px 5px;
 }
 
-button.reset:hover {
-  opacity: 0.9;
+button.reset:hover,
+button.buy:hover {
+  background-color: black;
+  color: mistyrose;
+}
+
+div.btn-cart {
+  display: flex;
+  justify-content: center;
+  padding-block: 5px;
 }
 
 @media screen and (max-width: 550px) {
@@ -82,7 +104,7 @@ button.reset:hover {
     font-size: medium;
   }
   button.reset {
-    display: block;
+    display: inline-block;
     position: relative;
     margin-inline: auto;
     top: 0;
