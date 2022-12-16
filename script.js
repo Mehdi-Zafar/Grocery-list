@@ -14,16 +14,19 @@ button.forEach((btn)=>{
             const th1 = document.createElement("th");
             const th2 = document.createElement("th");
             const th3 = document.createElement("th");
+            const th4 = document.createElement("th");
             th0.innerText = "S.no";
             th1.innerText = "Item Name";
             th2.innerText = "Quantity";
             th3.innerText = "Price";
+            th4.innerText = "Delete";
             tr0.append(th0);
             tr0.append(th1);
             tr0.append(th2);
             tr0.append(th3);
+            tr0.append(th4);
             cart.append(tr0);
-            th0.style, th1.style, th2.style,th3.style = "padding:10px";
+            th0.style, th1.style, th2.style,th3.style,th4.style = "padding-inline:15px";
         }
         if(!items.includes(btn.value)){
             const tr = document.createElement("tr");
@@ -31,6 +34,7 @@ button.forEach((btn)=>{
         const td1 = document.createElement("td");
         const td2 = document.createElement("td");
         const td3 = document.createElement("td");
+        const td4 = document.createElement("td");
         empty.style = "display:none";
         th.append(Sno);
         td1.append(btn.value);
@@ -38,15 +42,17 @@ button.forEach((btn)=>{
         td2.innerHTML = 1;
         td2.setAttribute("id",`${btn.value}`)
         td3.innerText = btn.dataset.price;
+        td4.innerHTML = `<button class="delete" title="Delete item"><i class="bi bi-trash"></i></button>`
         tr.append(th);
         tr.append(td1);
         tr.append(td2);
         tr.append(td3);
+        tr.append(td4);
         cart.append(tr);
         Sno+=1;
         totalBill+=parseInt(btn.dataset.price) * parseInt(document.getElementById(btn.value).innerHTML);
         document.querySelector("div.cart h3 span.bill").innerHTML= totalBill;
-        th.style, td1.style, td2.style = "padding:12px;";
+        th.style, td1.style, td2.style, td3.style, td4.style = "padding-inline:20px;";
         items.push(btn.value);
         }else{
             let quantity = parseInt(document.getElementById(btn.value).innerHTML);
@@ -87,3 +93,12 @@ buy.addEventListener("click",function(){
         }
     }
 })
+
+// const deletebtn = document.querySelectorAll("button.delete"); 
+// deletebtn.forEach((btn)=>{
+//     btn.addEventListener("click",function(){
+//         const row = btn.parentElement.parentElement;
+//         // row.remove();
+//         console.log(row);
+//     })
+// })

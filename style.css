@@ -26,10 +26,23 @@ div.container {
   color: black;
   margin-inline: auto;
   margin-top: 25px;
-  width: 25%;
+  width: 450px;
   border: 1px solid black;
   border-radius: 10px;
-  padding-inline: 30px;
+  padding-inline: 10px;
+  height: fit-content;
+  text-align: center;
+}
+
+.cart {
+  width: 450px;
+  background-color: mistyrose;
+  color: black;
+  margin-inline: auto;
+  margin-top: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-inline: 5px;
   height: fit-content;
   text-align: center;
 }
@@ -48,7 +61,7 @@ th,
 td {
   border: 2px solid black;
   border-collapse: collapse;
-  padding: 2px;
+  padding: 5px;
   /* padding-inline: 10px; */
   font-size: large;
   margin-inline: auto;
@@ -80,6 +93,14 @@ button.addNew {
   font-size: xx-large;
 }
 
+button.delete {
+  /* margin-top: 10px; */
+  margin-inline: auto;
+  display: inline-block;
+  border: none;
+  font-size: x-large;
+}
+
 button.reset,
 button.buy {
   border-radius: 5px;
@@ -98,10 +119,17 @@ div.btn-cart {
   padding-block: 5px;
 }
 
+@media screen and (max-width: 1024px) {
+  div.big-container {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 550px) {
   div.container {
-    padding-inline: 20px;
-    font-size: medium;
+    padding-inline: 5px;
+    font-size: small;
+    width: 300px;
   }
   button.reset {
     display: inline-block;
@@ -109,5 +137,25 @@ div.btn-cart {
     margin-inline: auto;
     top: 0;
     right: 0;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1px;
+    /* padding-inline: 10px; */
+    font-size: small;
+    margin-inline: auto;
+  }
+  .cart {
+    width: 300px;
+  }
+  button.addNew {
+    margin-top: 10px;
+    margin-inline: auto;
+    display: inline-block;
+    border: none;
+    font-size: large;
   }
 }
